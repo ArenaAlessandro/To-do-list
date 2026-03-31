@@ -1,35 +1,42 @@
-body {
-  font-family: Arial, sans-serif;
-  background: #0f172a; /* fondo oscuro */
-  color: #e2e8f0;
-  display: flex;
-  justify-content: center;
-}
-
-.container {
-  color: #c8c9f7;
-  margin-top: 60px;
-  background: #1e293b;
+.container-list {
   padding: 25px;
-  border-radius: 12px;
-  width: 320px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-  margin-left: 360px;
-  display: flex;
-  flex-direction: column;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+  width: 100%;
+  width: 80%;
+  height: 1050px;
+  margin-left: 5px;
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 40px;
+  background: #1e293b;
+}
+.container-izq{
+  background: #1e293b;
+  height: 1050px;
+  width: 19%;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.layout {
+  display: flex; /* 👈 CLAVE */
+}
+.mensaje{
+  text-align: center;
 }
 
 h1 {
-  color: #c8c9f7;
   text-align: center;
   margin-bottom: 20px;
 }
 
 .input-group {
+  max-width: 1700px;
   display: flex;
   gap: 10px;
+  margin-bottom: 10px;
 }
-
 
 input {
   flex: 1;
@@ -37,6 +44,13 @@ input {
   border-radius: 6px;
   border: none;
   outline: none;
+}
+
+select {
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
 }
 
 button {
@@ -53,40 +67,81 @@ button:hover {
   background: #2563eb;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
-  margin-top: 20px;
-  width: 100%;
-  margin-left: -10px;
-}
-
-li {
-  background: #334155;
-  padding: 10px;
-  border-radius: 6px;
-  margin-bottom: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-
-}
-
-li button {
-  background: #ef4444;
-}
-
-li button:hover {
-  background: #dc2626;
-}
-
+/* mensajes */
 .error {
   color: #ef4444;
-  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .cargado {
   color: #22c55e;
-  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* lista tipo tabla */
+.lista {
+  width: 100%;
+  margin-top: 15px;
+  list-style: none;
+  padding: 0;
+}
+
+/* header */
+.header {
+  display: grid;
+  grid-template-columns: 80px 1fr 120px 60px; /* 👈 4 columnas */
+  font-weight: bold;
+  padding: 10px;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+/* filas */
+.fila {
+  display: grid;
+  grid-template-columns: 80px 1fr 120px 60px; /* 👈 igual que header */
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #334155;
+}
+
+.id {
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+.nombre {
+  text-align: left;
+}
+
+.prioridad {
+  text-align: center;
+  margin-left: -40px;
+}
+
+/* botón eliminar */
+.fila button {
+  justify-self: end;
+  background: #ef4444;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+}
+
+.fila button:hover {
+  background: #dc2626;
+}
+
+/* colores por prioridad */
+.Baja {
+  border-left: 5px solid #22c55e;
+}
+
+.Media {
+  border-left: 5px solid #eab308;
+}
+
+.Alta {
+  border-left: 5px solid #ef4444;
 }
